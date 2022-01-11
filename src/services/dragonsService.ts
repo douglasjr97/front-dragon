@@ -32,10 +32,31 @@ const updateOne = ({ dragonId, name, type, history }: UpdateOneParams) => {
   });
 }
 
+type CreateOneParams = {
+  name: string;
+  type: string;
+  history: string;
+}
+
+/**
+ * Request to create a dragon
+ */
+const createOne = ({ name, type, history }: CreateOneParams) => {
+  
+ return api.post('dragon', {
+  name,
+  type,
+  histories: [history]
+})
+}
+
 const dragonsService = {
   getAll,
   deleteOne,
-  updateOne
+  updateOne,
+  createOne
 }
+
+
 
 export default dragonsService

@@ -16,6 +16,7 @@ import {
 } from './styles';
 import { IDragonItem } from '../../interfaces/IDragonItem';
 import dragonsService from '../../services/dragonsService';
+import { question, Toast } from '../../plugins/sweetAlert';
 
 export function Home() {
   const [dragons, setDragons] = useState([]);
@@ -49,12 +50,13 @@ export function Home() {
 
   async function handleAddDragon() {
     try {
-      await api.post('dragon', {
+      await dragonsService.createOne({
         name: nameDragonForm,
         type: typeDragonForm,
-        histories: [historyDragonForm],
+        history: historyDragonForm,
       });
-      alert('Dragão Adicionado');
+
+      Toast.fire({ icon: 'success', title: 'Dragão Adicionado' });
       fetchDragons();
       clearForm();
       setNewAddDragonModal(false);
@@ -65,8 +67,15 @@ export function Home() {
   }
 
   async function handleDeleteDragon(dragonId: number) {
-    await dragonsService.deleteOne(dragonId);
-    fetchDragons();
+    const { answer } = await question({
+      text: 'Essa operação não poderá ser desfeita',
+    });
+    if (answer === 'yes') {
+      await dragonsService.deleteOne(dragonId);
+      fetchDragons();
+    } else {
+      Toast.fire({ icon: 'info', title: 'O Dragão não foi excluído' });
+    }
   }
 
   function handleSelectDragon(dragonSelected: IDragonItem) {
@@ -98,12 +107,12 @@ export function Home() {
         history: historyDragonForm,
       });
 
-      alert('Dados alterados.');
+      Toast.fire({ icon: 'success', title: 'Dados Alterados' });
       clearForm();
       setNewInfoModal(false);
       fetchDragons();
     } catch (error) {
-      alert('Não foi possível alterar ');
+      Toast.fire({ icon: 'error', title: 'não foi possível alterar os dados' });
       console.log(error);
     }
   }
