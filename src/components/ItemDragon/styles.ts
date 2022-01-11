@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { GiDragonHead } from "react-icons/gi";
 import { BsFillCalendarMonthFill } from "react-icons/bs";
-import { AiFillDelete, AiFillInfoCircle } from "react-icons/ai";
+import { AiFillDelete } from "react-icons/ai";
 import { IoPencil } from "react-icons/io5";
 
 export const Container = styled.div`
@@ -9,8 +9,8 @@ export const Container = styled.div`
     flex:1;
     background-color: #3E3B47;
 
-    width: 80%;
-    height: 150px;
+    width: 50%;
+
     flex-direction: row;
 
     border-radius: 10px;
@@ -23,8 +23,9 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     display:flex;
-    flex:1;
     flex-direction: column;
+
+    width: 500px;
 
     
 `;
@@ -45,7 +46,7 @@ export const Date = styled.p`
 `;
 
 
-export const ImageRepository = styled.img`
+export const ImageDragon = styled.img`
     width: 80px;
     height: 80px;
     margin: 20px 16px;
@@ -55,6 +56,7 @@ export const Title = styled.p`
     
     color: white;
     font-family:'Roboto';
+    font-weight: bold;
     font-size: 24px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -64,18 +66,18 @@ export const IconDragon = styled(GiDragonHead)`
   margin-right: 7px;
 `;
 
-export const SubjectContent = styled.div`
+export const TypeDragonContainer = styled.div`
     display:flex;
     flex-direction: row;
     align-items: center;
 `;
 
-export const SubjectCount = styled.div`
+export const TypeDragon = styled.div`
     font-family: 'Roboto';
     color:#999591;
 `;
 
-export const Delete = styled.div`
+export const Delete = styled.button`
   display:flex;
   background-color: red;
   height:100%;
@@ -92,7 +94,7 @@ export const Delete = styled.div`
         }
 `;
 
-export const Info = styled.div`
+export const Info = styled.button`
   display:flex;
   background-color: red;
   height:100%;
@@ -121,5 +123,14 @@ export const Options = styled.div`
 display:flex;
 flex-direction: row;
 
-margin-left: 70%;
+margin-left: 40%;
+`;
+
+export const HistoryContainer = styled.div`
+    margin: 16px 0;
+    
+`;
+
+export const History = styled.p`
+    color:white;
 `;

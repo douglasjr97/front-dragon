@@ -12,6 +12,7 @@
     "@types/react-dom": "^17.0.11",
     "@types/react-modal": "^3.13.1",
     "axios": "^0.24.0",
+    "intl": "^1.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icon": "^1.0.0",
