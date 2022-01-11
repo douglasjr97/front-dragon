@@ -7,19 +7,19 @@ export const Container = styled.div`
   flex-direction: column;
   flex:1;
  
-margin: 16px;
+margin: 2rem;
 align-items: center;
 
 `;
 
 export const TitlePage = styled.h1`
     color: white;
-    font-size: 40px;
-    margin-bottom: 32px;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 `;
 export const TitleModal = styled.h1`
     color: white;
-    font-size: 48px;
+    font-size: 3rem;
 `;
 export const ContainerModal= styled.div`
 display:flex;
@@ -29,62 +29,40 @@ background-color: #3E3B47;
 align-items: center;
 `;
 
-export const Input= styled.input`
-width: 90%;
-height:100px;
 
-border-radius:10px;
-
-color: white;
-
-font-size:18px;
-margin-bottom: 16px;
-padding:16px;
-`;
 
 export const TextArea = styled.textarea`
 width: 90%;
-height:300px;
+height:19rem;
 
 border-radius:10px;
 
 color: white;
 
-font-size:18px;
-margin-bottom: 16px;
-padding:16px;
+font-size:1rem;
+margin-bottom: 1rem;
+padding:1rem;
 
-`;
-
-export const SelectTypeDragon = styled.select`
-width: 90%;
-height:100px;
-background-color: #363F5F;
-border-radius:10px;
-font-size:18px;
-color:white;
-margin-bottom: 16px;
-padding:16px;
 `;
 
 export const ButtonEdit = styled.button`
     width: 90%;
-    height: 70px;
+    height: 5rem;
     background-color: green;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: white;
 `;
 
 export const ButtonAdd = styled.button`
-    width:150px;
-    height: 150px;
+    width:10rem;
+    height: 10rem;
 
     border-radius: 100px;
 
     background-color:#2C6EF2;
     position: fixed;
-    right:30px;
-    bottom: 10px;
+    right:3rem;
+    bottom: 0.6rem;
 
     align-items:center;
     display:flex;

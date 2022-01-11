@@ -9,7 +9,7 @@ export const Container = styled.div`
     flex:1;
     background-color: #3E3B47;
 
-    width: 50%;
+   width:800px;
 
     flex-direction: row;
 
@@ -123,7 +123,7 @@ export const Options = styled.div`
 display:flex;
 flex-direction: row;
 
-margin-left: 40%;
+margin-left: 300px;
 `;
 
 export const HistoryContainer = styled.div`

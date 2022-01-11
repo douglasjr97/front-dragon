@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { ItemDragon } from '../../components/ItemDragon';
-import api from '../../services/api';
 import Modal from 'react-modal';
 import {
   ButtonAdd,
@@ -8,8 +7,6 @@ import {
   Container,
   ContainerModal,
   IconAdd,
-  Input,
-  SelectTypeDragon,
   TextArea,
   TitleModal,
   TitlePage,
@@ -17,6 +14,7 @@ import {
 import { IDragonItem } from '../../interfaces/IDragonItem';
 import dragonsService from '../../services/dragonsService';
 import { question, Toast } from '../../plugins/sweetAlert';
+import { Input } from '../../components/Input';
 
 export function Home() {
   const [dragons, setDragons] = useState([]);
@@ -117,8 +115,12 @@ export function Home() {
     }
   }
 
-  function closeModal() {
+  function closeModalInfo() {
     setNewInfoModal(false);
+  }
+
+  function closeModalAddDragon() {
+    setNewAddDragonModal(false);
   }
 
   return (
@@ -144,7 +146,7 @@ export function Home() {
       <Modal
         isOpen={newInfoModal}
         style={customStyles}
-        onRequestClose={closeModal}
+        onRequestClose={closeModalInfo}
       >
         <ContainerModal>
           <TitleModal>Edição de Dados</TitleModal>
@@ -174,7 +176,7 @@ export function Home() {
       <Modal
         isOpen={newAddDragonModal}
         style={customStyles}
-        onRequestClose={closeModal}
+        onRequestClose={closeModalAddDragon}
       >
         <ContainerModal>
           <TitleModal>Adicionar novo Dragão</TitleModal>

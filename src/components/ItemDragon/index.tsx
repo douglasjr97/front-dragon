@@ -1,5 +1,3 @@
-import React from "react";
-import DragonImg from "../../assets/dragon.png";
 import {
   Container,
   Content,
@@ -17,20 +15,17 @@ import {
   TypeDragonContainer,
   TypeDragon,
   HistoryContainer,
-  History
-
-} from "./styles";
-import { IDragonItem } from "../../interfaces/IDragonItem";
-import { formatDate } from "../../utils/helpers";
-
-
+  History,
+} from './styles';
+import { IDragonItem } from '../../interfaces/IDragonItem';
+import { formatDate } from '../../utils/helpers';
 
 interface Props {
   id: number;
   createdAt: Date;
   name: string;
   type: string;
-  histories:any;
+  histories: any;
   deleteDragon: (id: number) => Promise<void>;
   selectDragon: (dragonSelected: IDragonItem) => void;
 
@@ -44,7 +39,7 @@ export function ItemDragon({
   deleteDragon,
   selectDragon,
   dragon,
-  histories
+  histories,
 }: Props) {
   return (
     <Container>
@@ -61,13 +56,11 @@ export function ItemDragon({
         </DateContent>
 
         <HistoryContainer>
-          {histories[0] ?(
-          <History>"{histories[0]}"</History>
-          ):(
+          {histories[0] ? (
+            <History>"{histories[0]}"</History>
+          ) : (
             <History>Não há história</History>
           )}
-         
-          
         </HistoryContainer>
       </Content>
       <Options>
