@@ -19,6 +19,7 @@ import {
 } from './styles';
 import { IDragonItem } from '../../interfaces/IDragonItem';
 import { formatDate } from '../../utils/helpers';
+import ImageDragonLocal from '../../assets/dragon.png';
 
 interface Props {
   id: number;
@@ -43,7 +44,7 @@ export function ItemDragon({
 }: Props) {
   return (
     <Container>
-      <ImageDragon src="https://cdn-icons.flaticon.com/png/512/3275/premium/3275371.png?token=exp=1641989107~hmac=5c7538e26df15034d729a1306861c7ec" />
+      <ImageDragon src={ImageDragonLocal} />
       <Content>
         <Title>{name}</Title>
         <TypeDragonContainer>
