@@ -20,4 +20,6 @@ Para rodar o projeto, basta realizar os seguintes passos(assumindo que você seg
 ```
 # Inicie o app
 $ yarn start
+Login: dragao@gmail.com
+Senha: 123
 ```
