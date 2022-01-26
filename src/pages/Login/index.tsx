@@ -37,7 +37,7 @@ export function Login() {
         placeholder="Senha"
       />
 
-      <Button onClick={() => handleLogin(email, password)}>Login</Button>
+      <Button onClick={() => handleLogin(email, password)}>Entrar</Button>
     </Container>
   );
 }

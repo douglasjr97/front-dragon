@@ -5,7 +5,10 @@ export const Container = styled.div`
     flex:1;
     flex-direction: column;
     align-items: center;
-
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    /* background-color: red; */
 `;
 
 export const Title = styled.h1`
@@ -14,7 +17,7 @@ export const Title = styled.h1`
 `;
 
 export const Button = styled.button`
-    width: 90%;
+    width: 50%;
     height: 5rem;
     background-color: green;
     font-size: 2rem;
